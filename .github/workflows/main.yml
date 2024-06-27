@@ -10,10 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: ENG
-
-    if: vars.ENV1 == 'toto'
+    
+   
     steps:
     - name: Run a one-line script
+      if: vars.ENV1 == 'toto'
       run: |
         echo "test de variable OK : " {{ vars.ENV1 }}
+
+    - name: display vars
+      run: |
+        echo "Var ENV1 : " {{ vars.ENV1 }}
 

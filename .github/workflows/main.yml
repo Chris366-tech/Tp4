@@ -15,7 +15,7 @@ jobs:
     - name: Run a one-line script
       if: vars.ENV1 == 'toto' && vars.ENV2 == 'titi'
       run: |
-        echo "test de variables OK : " ${{ join(${{ vars.ENV1 }},"-",${{ vars.ENV2 }}) }}
+        echo "test de variables OK : " format('{{ Var {0} {1} {2} }}', {{ vars.ENV1 }}, '-', {{ vars.ENV2 }})
 
     - name: display vars
       run: |

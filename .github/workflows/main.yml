@@ -11,7 +11,7 @@ jobs:
     environment: 
       name: ENG
 
-    if: vars.ENV1 == 'toto' || vars.ENV2 == 'titi'
+    if: vars.ENV1 == 'toto'
     steps:
     - name: Run a one-line script
       run: |

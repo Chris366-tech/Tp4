@@ -11,4 +11,9 @@ jobs:
     environment: 
       name: ENG
 
-#    if: {{ vars.
+    if: vars.ENV1 == 'toto' || vars.ENV2 == 'titi'
+    steps:
+    - name: Run a one-line script
+      run: |
+        echo "test de variable OK : " {{ vars.ENV1 }}
+

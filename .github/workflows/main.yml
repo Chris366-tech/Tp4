@@ -13,9 +13,9 @@ jobs:
    
     steps:
     - name: Run a one-line script
-      if: vars.ENV1 == 'toto'
+      if: vars.ENV1 == 'toto' && vars.ENV2 == 'titi'
       run: |
-        echo "test de variable OK : " ${{ vars.ENV1 }}
+        echo "test de variables OK : " ${{ vars.ENV1 }} "et" ${{ vars.ENV2 }}
 
     - name: display vars
       run: |
